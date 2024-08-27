@@ -28,10 +28,33 @@ class Judge:
             Dict[int, Character]: A dictionary of models with unique integer keys.
         """
         models = [
-            Character(name="Alice", description="You are a math expert that colaborates with your chat partner to find the most efficient solution to solve a polynomial equation", id=0),
-            Character(name="Bob", description="You are a math expert that colaborates with your chat partner to find the most efficient solution to solve a polynomial equation", id=1)
+            Character(name="Alice", description="", pfp= "media/robot_pfp01.png", id=0),
+            Character(name="Bob", description="", pfp="media/robot_pfp02.png", id=1)
         ]
         return models
+
+    def adjust_models(self, config) -> None:
+        """
+        Adjusts the models with the provided configurations.
+
+        Args:
+            model_configs (Dict[int, Character]): A dictionary of model instances or configurations.
+        """
+        self.models[0].set_pfp(config["bot_one_pfp"])
+        self.models[0].set_name(config["bot_one_name"])
+        self.models[0].set_description(config["bot_one_description"])
+        self.models[1].set_pfp(config["bot_one_pfp"])
+        self.models[1].set_name(config["bot_two_name"])
+        self.models[1].set_description(config["bot_two_description"])
+
+    def get_pfps(self) -> List[str]:
+        """
+        Returns the profile picture URLs of the models.
+
+        Returns:
+            List[str]: A list of profile picture URLs.
+        """
+        return [model.pfp for model in self.models]
 
     def reset_conversation(self) -> None:
         """

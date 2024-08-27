@@ -7,10 +7,20 @@ import ollama
 
 class Character:
     
-    def __init__(self, name, description, id):
+    def __init__(self, name, description, pfp, id):
         self.name = name
         self.description = description
+        self.pfp = pfp
         self.id = id
+
+    def set_name(self, name):
+        self.name = name
+
+    def set_description(self, description):
+        self.description = description
+
+    def set_pfp(self, pfp):
+        self.pfp = pfp
 
     def system_prompt(self):
         return f"Your name is {self.name}. {self.description}."
