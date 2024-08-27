@@ -1,8 +1,6 @@
 from typing import List, Dict, Optional
 from character import Character
 
-from tts import TTS
-
 import json
 
 class Judge:
@@ -20,7 +18,6 @@ class Judge:
         """
         self.conversation_history: List[Dict[str, str]] = []
         self.models: Dict[int, Character] = model_configs if model_configs else self.create_models()
-        self.tts_engine = TTS()
         self.counter: int = 0
 
     def create_models(self) -> Dict[int, Character]:
@@ -59,9 +56,7 @@ class Judge:
             else:
                 speech["role"] = "assistant"
 
-            # Speak the response
-            audio = self.tts_engine.generate_audio(speech["content"])
-            return speech, audio
+            return speech
         except Exception as e:
             print(f"Error during conversation: {e}")
             return None
