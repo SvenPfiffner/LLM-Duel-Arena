@@ -46,6 +46,11 @@ def install_dependencies(venv_path):
     subprocess.check_call([pip_executable, "install", "-r", "requirements.txt"])
 
 def main(include_ollama=True):
+    """Main entry point of the script.
+    if include_ollama is True, the Ollama server will be started along with the program.
+    If the intention is to run the program with a different LLM API, or you wish to run
+    Ollama separately, set include_ollama to False.
+    """
 
     if include_ollama:
         # Start the Ollama server
