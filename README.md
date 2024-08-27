@@ -1,3 +1,9 @@
+<div align="center">
+
+<img src="https://github.com/SvenPfiffner/LLM-Duel-Arena/blob/main/llmarena/media/robot_pfp02.png" width="300">
+
+</div>
+
 # LLM Conversational UI
 
 This project provides a user interface that allows users to observe a conversation between two Large Language Models (LLMs). The UI enables the creation of unique character personas for each model, and the models converse with each other based on the predefined personas. The conversation can be progressed manually (step-by-step) or be fully automated for a predefined number of interactions. Further, the conversation history is logged via a JSON and can be saved for further analysis or synthetic dataset generation.
