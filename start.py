@@ -79,7 +79,7 @@ def main(include_ollama=True):
     # from src.main import main as run_app
     # run_app()
     print("Running the application...", "\n")
-    application_process = subprocess.Popen([os.path.join(venv_path, "bin", "python"), "ui.py"])
+    application_process = subprocess.Popen([os.path.join(venv_path, "bin", "python"), "llmarena/ui.py"])
 
     time.sleep(3)
     print("--------------------------------------------------")
