@@ -8,19 +8,21 @@
 
 This project provides a user interface that allows users to observe a conversation between two Large Language Models (LLMs). The UI enables the creation of unique character personas for each model, and the models converse with each other based on the predefined personas. The conversation can be progressed manually (step-by-step) or be fully automated for a predefined number of interactions. Further, the conversation history is logged via a JSON and can be saved for further analysis or synthetic dataset generation.
 
+**NOTE: The current state of the project is WORK IN PROGRESS/PROOF OF CONCEPT. The current version is usable, but suffers from minor halucinations due to residuals from the standard prompt remaining in the conversation history. This will be addressed when time allows, but would probably be an easy fix in a fork.**
+
 ## Features
 
 - **Define Character Personas:** Customize the personality and role of each LLM character.
 - **Watch LLMs Converse:** Observe how two LLMs interact with each other based on the defined personas.
 - **Download Conversation History:** Save the conversation history in JSON format for analysis.
-- **Ollama & API Integration:** Interfaces directly with the chat endpoint of Ollama and can use it to perform on-device inference with all [supported models](https://ollama.com/library).
+- **Ollama Integration:** Interfaces directly with the chat endpoint of Ollama and can use it to perform on-device inference with all [supported models](https://ollama.com/library).
 
 ## Installation
 
 ### Prerequisites
 
 - **Python** must be installed on your system. The current version is developed and tested under **Python 3.11** and may or may not work with other versions. Integration tests with other versions is *TODO*
-- **Ollama server** (if using Ollama for LLM management). Ensure [it is installed](https://ollama.com/) and available in your system's PATH.
+- **Ollama server** Ensure [it is installed](https://ollama.com/) and available in your system's PATH.
 
 ### Steps
 
